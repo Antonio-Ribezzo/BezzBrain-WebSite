@@ -1,17 +1,22 @@
 <script>
   import axios from 'axios';
   import headerComp from './components/headerComp.vue';
+  import ProjectCard from './components/ProjectCard.vue';
+
+  import { store } from './store.js';
+
 
   export default{
     name: 'App',
     components:{
-      headerComp
+      headerComp,
+      ProjectCard
     },
 
     data(){
       return{
+        store,
         projects: [],
-        base_Url: 'http://127.0.0.1:8000'
       }
     },
 
@@ -21,7 +26,7 @@
 
     methods:{
       getProjects(){
-        axios.get(`${this.base_Url}/api/projects`).then(res => {
+        axios.get(`${this.store.base_Url}/api/projects`).then(res => {
           //nell'array vuoto 'projects' devo inserire i dati provenienti dall'api
           console.log(res.data.projects)
           this.projects = res.data.projects
@@ -35,9 +40,15 @@
 <template>
   <headerComp/>
 
-  <div class='container d-flex justify-content-between align-items-start flex-wrap mt-5'>
+  <div class='container d-flex justify-content-between align-items-start flex-wrap'>
 
-<table class="table table-dark table-hover">
+    <ProjectCard 
+      v-for="(el,index) in projects"
+        :projectDetails="el"
+        :projectIndex="index"
+    />
+
+  <!-- <table class="table table-dark table-hover">
     <thead>
       <tr>
         <th scope="col">n°</th>
@@ -58,14 +69,14 @@
                 </a>
             </td>
             <td class="align-middle">
-            <!-- technologies   -->
               <div v-if="el.technologies" class="my-3">
                 <span v-for="(el,index) in el.technologies" :key="index" class="badge rounded-pill text-bg-light mx-1">{{ el.name }}</span>        
               </div>
             </td>
         </tr>
     </tbody>
-</table>
+  </table> -->
+
 </div>
   
 </template>
