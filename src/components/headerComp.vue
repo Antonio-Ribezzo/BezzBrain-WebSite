@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-md my-0 py-0">
+    <nav class="navbar navbar-expand-md my-3 py-0">
             <div class="container">
 
                 <a class="navbar-brand" href="#">
