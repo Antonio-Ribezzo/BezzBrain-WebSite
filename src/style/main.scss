@@ -1,6 +1,10 @@
 // importo i partials
 @import './partials/variables.scss';
 @import './partials/mixin.scss';
+
 // importo bootstrap
 @import 'node_modules/bootstrap/scss/bootstrap';
 
+#app{
+    background-color: black;
+}

@@ -5,9 +5,13 @@
 </script>
 
 <template>
-   <h1>Home</h1>
+   <div id="jumbotron">
+
+   </div>
 </template>
 
 <style lang="scss" scoped>
-
+    #jumbotron{
+        height: 85vh;
+    }
 </style>
