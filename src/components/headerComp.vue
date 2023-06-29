@@ -24,7 +24,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <router-link :to="{ name: 'home'}" class="nav-link">Home</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link :to="{ name: 'projects'}" class="nav-link">Projects</router-link>
                         </li>
                     </ul>
                     

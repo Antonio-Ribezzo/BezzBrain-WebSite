@@ -40,13 +40,15 @@
 <template>
   <headerComp/>
 
-  <div class='container d-flex justify-content-between align-items-start flex-wrap'>
+  <router-view></router-view>
+
+  <!-- <div class='container d-flex justify-content-between align-items-start flex-wrap'>
 
     <ProjectCard 
       v-for="(el,index) in projects"
         :projectDetails="el"
         :projectIndex="index"
-    />
+    /> -->
 
   <!-- <table class="table table-dark table-hover">
     <thead>
@@ -77,7 +79,7 @@
     </tbody>
   </table> -->
 
-</div>
+<!-- </div> -->
   
 </template>
 
