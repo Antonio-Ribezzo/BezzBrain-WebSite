@@ -7,4 +7,23 @@ import { router } from './router';
 // importo bootstrap
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
-createApp(App).use(router).mount('#app')
+// importo i font
+import '@fontsource/audiowide';
+
+// importo the fontawesome core
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+/* import specific icons */
+import { faBurger } from '@fortawesome/free-solid-svg-icons'
+
+/* add icons to the library */
+library.add(faBurger)
+
+
+createApp(App)
+.component('font-awesome-icon', FontAwesomeIcon)
+.use(router)
+.mount('#app')

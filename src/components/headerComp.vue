@@ -16,7 +16,8 @@
 
                 <!-- humburger -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                    <!-- <img src="" alt="Toggle navigation"> -->
+                    <font-awesome-icon :icon="['fas', 'burger']" alt="Toggle navigation" class="text-white fs-1"/>
                 </button>
 
 
@@ -25,16 +26,11 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav ms-auto gap-2">
                         <li class="nav-item">
-                            <router-link :to="{ name: 'home'}" class="nav-link badge rounded-pill bg-dark-subtle p-3">Home</router-link>
+                            <router-link :to="{ name: 'home'}" class="nav-link badge rounded-pill bg-dark p-3">Home </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link :to="{ name: 'projects'}" class="nav-link badge rounded-pill bg-dark-subtle p-3">Projects</router-link>
+                            <router-link :to="{ name: 'projects'}" class="nav-link badge rounded-pill bg-dark p-3">Projects</router-link>
                         </li>
-                    </ul>
-                    
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav">
-                        
                     </ul>
                 </div>
             </div>
@@ -42,8 +38,5 @@
 </template>
 
 <style lang="scss" scoped>
-    nav{
-        height: 15vh;
-    }
-
+    
 </style>
