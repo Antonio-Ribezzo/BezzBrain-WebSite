@@ -3,6 +3,8 @@ import HomePage from './pages/HomePage.vue';
 import ProjectsPage from './pages/ProjectsPage.vue';
 import SingleProjectPage from './pages/SingleProjectPage.vue';
 import AboutPage from './pages/AboutPage.vue';
+import NotFoundPage from './pages/NotFoundPage.vue';
+
 
 
 
@@ -28,6 +30,11 @@ const router = createRouter({
             path: '/about-me',
             name: 'about-me',
             component: AboutPage
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'not-found',
+            component: NotFoundPage
         }
     ]
     });
