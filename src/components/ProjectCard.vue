@@ -33,6 +33,7 @@
 
             <p class="card-text"><span class="text-decoration-underline">Date</span>: {{ projectDetails.project_date }}</p>
         </div>
+        <router-link :to="{name: 'project', params:{ id: projectIndex} }" class="btn btn-success">GO</router-link>
     </div>
 </template>
 
