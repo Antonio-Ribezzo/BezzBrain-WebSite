@@ -13,7 +13,7 @@
 </script>
 
 <template>
-    <div class="card mb-5 p-3">
+    <div class="card mb-5 bg-dark text-white">
         <img class="card-img-top" :src="store.base_Url + '/storage/' + projectDetails.cover_image " :alt="projectDetails.title">
         <div class="card-body">
             <h2 class="card-title text-center text-white">{{ projectDetails.title }}</h2>
@@ -32,8 +32,6 @@
             <p class="card-text"><span class="text-decoration-underline">Buyer</span>: {{ projectDetails.buyer }}</p>
 
             <p class="card-text"><span class="text-decoration-underline">Date</span>: {{ projectDetails.project_date }}</p>
-
-
         </div>
     </div>
 </template>
