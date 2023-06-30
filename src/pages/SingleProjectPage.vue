@@ -30,7 +30,10 @@
 </script>
 
 <template>
-    Single project
+    <div class="text-white">
+        <h1>{{ project.title }}</h1>
+        <p>{{ project.description }}</p>
+    </div>
 </template>
 
 <style lang="scss" scoped>

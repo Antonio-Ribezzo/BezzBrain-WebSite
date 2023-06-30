@@ -25,7 +25,7 @@
           getProjects(){
             axios.get(`${this.store.base_Url}/api/projects`).then(res => {
               //nell'array vuoto 'projects' devo inserire i dati provenienti dall'api
-              console.log(res.data.projects)
+            //   console.log(res.data.projects)
               this.projects = res.data.projects
             })
           }
