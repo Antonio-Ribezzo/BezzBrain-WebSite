@@ -16,8 +16,8 @@
                 projects: [],
                 currentPage:1,
                 lastPage:null,
-                types: null,
-                selectedTypes:"all"
+                type: null,
+                selectedType:"all"
             }
         },
 
@@ -28,13 +28,19 @@
 
         methods:{
           getProjects(projectApiPage){
-            axios.get(`${this.store.base_Url}/api/projects`,{
-              params:{
-                page:projectApiPage
-              }
-            }).then(res => {
+
+            const params = {
+              page: projectApiPage
+            }
+
+            if(this.selectedType !== 'all'){
+              params.type_id = this.selectedType
+            }
+
+            axios.get(`${this.store.base_Url}/api/projects`,{params}).then(res => {
               //nell'array vuoto 'projects' devo inserire i dati provenienti dall'api
             //   console.log(res.data.projects)
+              
               this.projects = res.data.projects.data
               this.currentPage=res.data.projects.current_page
               this.lastPage=res.data.projects.last_page
@@ -42,8 +48,8 @@
             })
           },
           getTypes(){
-            axios.get(`${this.store.base_Url}/api/types`).then(res => {
-              this.types = res.data.types
+            axios.get(`${this.store.base_Url}/api/type`).then(res => {
+              this.type = res.data.types
             })
           }
         }
@@ -53,12 +59,9 @@
 <template>
    <h1 class="text-white text-center mb-5">Projects</h1>
 
-   <select @change="getTypes" v-model="selectedTypes" class="form-select form-select-large" name="" id="">
+   <select @change="getProjects()" v-model="selectedType" class="form-select form-select-large" name="" id="">
     <option value="all">-- All --</option>
-    <option v-for="(elem, index) in types" :key="index" :value="elem.id" >{{ elem.name }}</option>
-
-
-
+    <option v-for="(elem, index) in type" :key="index" :value="elem.id" >{{ elem.name_type }}</option>
    </select>
 
    <div class='container d-flex justify-content-center gap-5 align-items-start flex-wrap mb-3'>
