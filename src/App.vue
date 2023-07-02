@@ -1,10 +1,13 @@
 <script>
   import headerComp from './components/headerComp.vue';
+  import footerComp from './components/footerComp.vue';
+
 
   export default{
     name: 'App',
     components:{
       headerComp,
+      footerComp
     }
   }
 
@@ -14,6 +17,8 @@
   <headerComp/>
 
   <router-view></router-view>
+
+  <footerComp/>
 
 </template>
 

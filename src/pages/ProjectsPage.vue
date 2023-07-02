@@ -36,12 +36,12 @@
 <template>
    <h1 class="text-white text-center mb-5">Projects</h1>
 
-   <div class='container d-flex justify-content-between align-items-start flex-wrap'>
+   <div class='container d-flex justify-content-center gap-5 align-items-start flex-wrap mb-3'>
 
         <ProjectCard 
           v-for="(el,index) in projects"
             :projectDetails="el"
-            :projectIndex="index"
+            :projectIndex="index + 1"
         />
 
     </div>

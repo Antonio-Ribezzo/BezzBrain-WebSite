@@ -36,6 +36,7 @@ const router = createRouter({
             name: 'not-found',
             component: NotFoundPage
         }
+        
     ]
     });
     export { router };
