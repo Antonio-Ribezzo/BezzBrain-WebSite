@@ -17,13 +17,23 @@
                 currentPage:1,
                 lastPage:null,
                 type: null,
-                selectedType:"all"
+                selectedType:"all",
+                technologies: null,
+                selectedTechnologies: []
             }
         },
 
         mounted(){
             this.getProjects(1);
             this.getTypes();
+            this.getTechnologies();
+        },
+
+        watch:{
+          selectedTechnologies:{
+            handler:"getProjects",
+            deep:true
+          }
         },
 
         methods:{
@@ -35,6 +45,10 @@
 
             if(this.selectedType !== 'all'){
               params.type_id = this.selectedType
+            }
+
+            if(this.selectedTechnologies.length > 0){
+              params.technology_id = this.selectedTechnologies.join(',');
             }
 
             axios.get(`${this.store.base_Url}/api/projects`,{params}).then(res => {
@@ -51,52 +65,76 @@
             axios.get(`${this.store.base_Url}/api/type`).then(res => {
               this.type = res.data.types
             })
+          },
+          getTechnologies(){
+            axios.get(`${this.store.base_Url}/api/technologies`).then(res => {
+              this.technologies = res.data.technologies
+            })
           }
         }
     }
 </script>
 
 <template>
-   <h1 class="text-white text-center mb-5">Projects</h1>
-  <div class="container my-4 d-flex justify-content-start">
-    <select @change="getProjects()" v-model="selectedType" class="form-select form-select-sm" name="" id="">
-     <option value="all">-- All --</option>
-     <option v-for="(elem, index) in type" :key="index" :value="elem.id" >{{ elem.name_type }}</option>
-    </select>
+  <h1 class="text-white text-center mb-4">Projects</h1>
+
+
+  <div class="container mb-4 d-flex flex-column justify-content-start align-items-start">
+      <!-- selected type of project -->
+      <div>
+        <select @change="getProjects()" v-model="selectedType" class="form-select form-select-sm bg-dark text-white" id="projectTypeSelect">
+         <option value="all">Type of Project</option>
+         <option v-for="(elem, index) in type" :key="index" :value="elem.id" >{{ elem.name_type }}</option>
+        </select>
+      </div>
+
+      <!-- checkbox Technologies  -->
+      <div class="my-3">
+        <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#collapseTechnologies" role="button" aria-expanded="false" aria-controls="collapseTechnologies">
+        Technologies
+        </button>
+        <div id="collapseTechnologies" class="collapse mt-2 p-4 rounded bg-dark text-white">
+          <div class="bg-dark rounded">
+            <label v-for="(el,index) in technologies" :key="index" :for="el.name" class="me-2">
+              <input class="me-1" type="checkbox" :value="el.id" v-model="selectedTechnologies" :id="el.name">{{ el.name }}
+            </label>
+          </div>
+        </div>
+      </div>
+
   </div>
 
-   <div class='container d-flex justify-content-center gap-5 align-items-start flex-wrap mb-3'>
+  <!-- project cards -->
+  <div class='container d-flex justify-content-center gap-5 align-items-start flex-wrap mb-3 px-5'>
+    <ProjectCard 
+      v-for="(el,index) in projects"
+        :projectDetails="el"
+        :projectIndex="index + 1"
+    />
+  </div>
 
-        <ProjectCard 
-          v-for="(el,index) in projects"
-            :projectDetails="el"
-            :projectIndex="index + 1"
-        />
+  <!-- pagination -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination pagination-sm justify-content-center mt-5 mb-3">
+      <li class="page-item">
+        <a class="page-link bg-dark border-0" @click.prevent="getProjects(currentPage - 1)" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
 
-    </div>
+      <li class="page-item" :class="(currentPage === elem)? 'active' : ''" aria-current="page" v-for="(elem,index) in lastPage" :key="index">
+        <a class="page-link bg-dark border-0" @click.prevent="getProjects(elem)" href="#" aria-label="Previous">
+          {{elem}}
+        </a>
+      </li>
 
-    <nav aria-label="Page navigation">
-      <ul class="pagination pagination-sm justify-content-center">
-        <li class="page-item">
-          <a class="page-link bg-dark border-0" @click.prevent="getProjects(currentPage - 1)" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-
-        <li class="page-item" :class="(currentPage === elem)? 'active' : ''" aria-current="page" v-for="(elem,index) in lastPage" :key="index">
-          <a class="page-link bg-dark border-0" @click.prevent="getProjects(elem)" href="#" aria-label="Previous">
-            {{elem}}
-          </a>
-        </li>
-
-        <li class="page-item">
-          <a class="page-link bg-dark border-0" @click.prevent="getProjects(currentPage + 1)" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      
-      </ul>
-    </nav>
+      <li class="page-item">
+        <a class="page-link bg-dark border-0" @click.prevent="getProjects(currentPage + 1)" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <style lang="scss" scoped>
