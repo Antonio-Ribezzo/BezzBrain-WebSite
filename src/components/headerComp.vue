@@ -17,7 +17,8 @@
                 <!-- humburger -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <!-- <img src="" alt="Toggle navigation"> -->
-                    <font-awesome-icon :icon="['fas', 'burger']" alt="Toggle navigation" class="text-white fs-1"/>
+                    <!-- <font-awesome-icon :icon="['fas', 'burger']" alt="Toggle navigation" class="text-white fs-1"/> -->
+                    <font-awesome-icon :icon="['fas', 'bars']" alt="Toggle navigation" class="text-white fs-1"/>
                 </button>
 
 

@@ -17,10 +17,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faBurger } from '@fortawesome/free-solid-svg-icons'
+import { faBurger, faArrowLeft, faBars } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faBurger)
+library.add(faBurger, faArrowLeft, faBars)
 
 
 createApp(App)

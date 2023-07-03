@@ -79,7 +79,7 @@
   <h1 class="text-white text-center mb-4">Projects</h1>
 
 
-  <div class="container mb-4 d-flex flex-column justify-content-start align-items-start px-5">
+  <div class="container mb-4 d-flex flex-row justify-content-start align-items-start px-5">
 
     <!-- checkbox Technologies  -->
     <div class="my-3">
@@ -96,9 +96,9 @@
     </div>
 
     <!-- selected type of project -->
-    <div>
+    <div class="my-3 ms-3">
       <select @change="getProjects()" v-model="selectedType" class="form-select form-select-sm text-white border-0 fs-6 p-2" id="projectTypeSelect">
-        <option value="all">Type of Project</option>
+        <option value="all">All Projects</option>
         <option v-for="(elem, index) in type" :key="index" :value="elem.id" >{{ elem.name_type }}</option>
       </select>
     </div>
