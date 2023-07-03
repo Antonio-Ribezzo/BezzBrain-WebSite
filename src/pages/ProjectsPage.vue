@@ -79,28 +79,31 @@
   <h1 class="text-white text-center mb-4">Projects</h1>
 
 
-  <div class="container mb-4 d-flex flex-column justify-content-start align-items-start">
-      <!-- selected type of project -->
-      <div>
-        <select @change="getProjects()" v-model="selectedType" class="form-select form-select-sm bg-dark text-white" id="projectTypeSelect">
-         <option value="all">Type of Project</option>
-         <option v-for="(elem, index) in type" :key="index" :value="elem.id" >{{ elem.name_type }}</option>
-        </select>
-      </div>
+  <div class="container mb-4 d-flex flex-column justify-content-start align-items-start px-5">
 
-      <!-- checkbox Technologies  -->
-      <div class="my-3">
-        <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#collapseTechnologies" role="button" aria-expanded="false" aria-controls="collapseTechnologies">
+    <!-- checkbox Technologies  -->
+    <div class="my-3">
+      <button type="button" class="fs-6 btn btn-dark form-select form-select-sm" data-bs-toggle="collapse" data-bs-target="#collapseTechnologies" role="button" aria-expanded="false" aria-controls="collapseTechnologies">
         Technologies
-        </button>
-        <div id="collapseTechnologies" class="collapse mt-2 p-4 rounded bg-dark text-white">
-          <div class="bg-dark rounded">
-            <label v-for="(el,index) in technologies" :key="index" :for="el.name" class="me-2">
-              <input class="me-1" type="checkbox" :value="el.id" v-model="selectedTechnologies" :id="el.name">{{ el.name }}
-            </label>
-          </div>
+      </button>
+      <div id="collapseTechnologies" class="collapse mt-2 p-4 rounded bg-dark text-white">
+        <div class="bg-dark rounded">
+          <label v-for="(el,index) in technologies" :key="index" :for="el.name" class="me-2">
+            <input class="me-1" type="checkbox" :value="el.id" v-model="selectedTechnologies" :id="el.name">{{ el.name }}
+          </label>
         </div>
       </div>
+    </div>
+
+    <!-- selected type of project -->
+    <div>
+      <select @change="getProjects()" v-model="selectedType" class="form-select form-select-sm text-white border-0 fs-6 p-2" id="projectTypeSelect">
+        <option value="all">Type of Project</option>
+        <option v-for="(elem, index) in type" :key="index" :value="elem.id" >{{ elem.name_type }}</option>
+      </select>
+    </div>
+
+      
 
   </div>
 
@@ -138,5 +141,11 @@
 </template>
 
 <style lang="scss" scoped>
-
+  select{
+    background-color: #212529;
+    &:hover{
+      cursor: pointer;
+      background-color: #424649;
+    }
+  }
 </style>
