@@ -58,11 +58,12 @@
 
 <template>
    <h1 class="text-white text-center mb-5">Projects</h1>
-
-   <select @change="getProjects()" v-model="selectedType" class="form-select form-select-large" name="" id="">
-    <option value="all">-- All --</option>
-    <option v-for="(elem, index) in type" :key="index" :value="elem.id" >{{ elem.name_type }}</option>
-   </select>
+  <div class="container my-4 d-flex justify-content-start">
+    <select @change="getProjects()" v-model="selectedType" class="form-select form-select-sm" name="" id="">
+     <option value="all">-- All --</option>
+     <option v-for="(elem, index) in type" :key="index" :value="elem.id" >{{ elem.name_type }}</option>
+    </select>
+  </div>
 
    <div class='container d-flex justify-content-center gap-5 align-items-start flex-wrap mb-3'>
 
@@ -75,21 +76,21 @@
     </div>
 
     <nav aria-label="Page navigation">
-      <ul class="pagination">
+      <ul class="pagination pagination-sm justify-content-center">
         <li class="page-item">
-          <a class="page-link" @click.prevent="getProjects(currentPage - 1)" href="#" aria-label="Previous">
+          <a class="page-link bg-dark border-0" @click.prevent="getProjects(currentPage - 1)" href="#" aria-label="Previous">
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
 
         <li class="page-item" :class="(currentPage === elem)? 'active' : ''" aria-current="page" v-for="(elem,index) in lastPage" :key="index">
-          <a class="page-link" @click.prevent="getProjects(elem)" href="#" aria-label="Previous">
+          <a class="page-link bg-dark border-0" @click.prevent="getProjects(elem)" href="#" aria-label="Previous">
             {{elem}}
           </a>
         </li>
 
         <li class="page-item">
-          <a class="page-link" @click.prevent="getProjects(currentPage + 1)" href="#" aria-label="Next">
+          <a class="page-link bg-dark border-0" @click.prevent="getProjects(currentPage + 1)" href="#" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
           </a>
         </li>

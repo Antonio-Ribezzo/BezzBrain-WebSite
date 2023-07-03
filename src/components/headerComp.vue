@@ -8,11 +8,11 @@
     <nav class="navbar navbar-expand-md my-3 py-0">
             <div class="container">
 
-                <a class="navbar-brand" href="#">
+                <router-link :to="{ name: 'home'}" class="navbar-brand">
                     <div>
                         <img src="img/sfondo-trasparente-bezz.png" alt="logo-navbar" class="img-fluid" style="height:100px">
                     </div>
-                </a>
+                </router-link>
 
                 <!-- humburger -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
