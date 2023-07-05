@@ -35,6 +35,9 @@
                         <li class="nav-item">
                             <router-link :to="{ name: 'about-me'}" class="nav-link badge rounded-pill bg-dark p-3">About me</router-link>
                         </li>
+                        <li class="nav-item">
+                            <router-link :to="{ name: 'contacts'}" class="nav-link badge rounded-pill bg-dark p-3">Contacts</router-link>
+                        </li>
                     </ul>
                 </div>
             </div>
