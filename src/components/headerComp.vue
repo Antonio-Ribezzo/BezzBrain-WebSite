@@ -10,7 +10,7 @@
 
                 <router-link :to="{ name: 'home'}" class="navbar-brand">
                     <div>
-                        <img src="img/sfondo-trasparente-bezz.png" alt="logo-navbar" class="img-fluid" style="height:100px">
+                        <img src="img/sfondo.png" alt="logo-navbar" class="img-fluid" style="height:100px">
                     </div>
                 </router-link>
 
