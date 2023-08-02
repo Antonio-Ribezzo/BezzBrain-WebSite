@@ -7,9 +7,9 @@
 <template>
    <div class="d-flex flex-column justify-content-start align-items-center p-3 my-5 container rounded-4 position-relative">
         <!-- immagine di background -->
-        <img id="logo-img" src="img/sfondo.png" alt="about-me-photo" class="position-absolute">
+        <img id="logo-img" src="../../public/img/sfondo.png" alt="about-me-photo" class="position-absolute">
         <!-- content -->
-        <img id="about-img" src="img/about.png" alt="about-me-photo" class="img-fluid rounded-circle my-4">
+        <img id="about-img" src="../../public/img/sfondo.png" alt="about-me-photo" class="img-fluid rounded-circle my-4">
         <p class="text-secondary text-center fs-3">
             "I'm a passionate <span class="text-danger fst-italic">Full Stack Web Developer</span> with expertise in a wide range of technologies. I specialize in both front-end and back-end development, bringing together the best of both worlds to create exceptional web experiences.
 
