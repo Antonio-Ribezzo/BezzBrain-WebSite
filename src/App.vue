@@ -1,13 +1,13 @@
 <script>
   import headerComp from './components/headerComp.vue';
-  // import footerComp from './components/footerComp.vue';
+  import footerComp from './components/footerComp.vue';
 
 
   export default{
     name: 'App',
     components:{
       headerComp,
-      // footerComp
+      footerComp
     }
   }
 
@@ -18,7 +18,7 @@
 
   <router-view></router-view>
 
-  <!-- <footerComp/> -->
+  <footerComp/>
 
 </template>
 

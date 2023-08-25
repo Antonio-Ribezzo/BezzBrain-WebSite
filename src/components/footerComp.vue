@@ -5,17 +5,23 @@
 </script>
 
 <template>
-    <div id="footerContainer" class="p-1">
-        <span class="text-center text-secondary d-block">Created by Bezz</span>
+    <div id="footerContainer" class="p-1 position-fixed">
+        <span class="text-center d-block">created by bezz</span>
     </div>
     
 </template>
 
 <style lang="scss" scoped>
     #footerContainer{
-        background-color: rgb(42, 40, 40);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #ecedee;
         span{
-            font-size: 0.7rem;
+            color: black;
+            font-family: 'Amatic SC', cursive;
+            font-size: 1.3rem;
+            font-weight: bold;
         }
     }
 </style>

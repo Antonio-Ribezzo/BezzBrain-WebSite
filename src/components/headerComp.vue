@@ -10,7 +10,7 @@
 
                 <router-link :to="{ name: 'home'}" class="navbar-brand">
                     <div>
-                        <span class="m-0">bezzbrain</span>
+                        <h1 class="m-0">bezzbrain</h1>
                     </div>
                 </router-link>
 
@@ -44,10 +44,9 @@
 
 <style lang="scss" scoped>
     @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
-    span{
+    span,h1{
         font-family: 'Amatic SC', cursive;
         font-size: 2rem;
-        // font-weight: bold;
         color: black;
         &:hover{
             font-weight: bold;
@@ -57,5 +56,17 @@
     button{
         color: black;
         border: none;
+    }
+
+    @media screen and (max-width: 570px) {
+        span{
+            font-size: 1.2rem;
+        }
+    }
+
+    @media screen and (min-width: 571px) and (max-width: 767px) {
+        span{
+            font-size: 1.3rem;
+        }
     }
 </style>
