@@ -14,6 +14,7 @@
 </script>
 
 <template>
+
   <headerComp/>
 
   <router-view></router-view>

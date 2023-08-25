@@ -5,8 +5,9 @@
 </script>
 
 <template>
+  
   <div id="jumbo-container" class="d-flex justify-content-center align-items-center">
-    <img src="../../public/img/logo-animation.gif" alt="logo-animated">
+    <img src="/img/logo-animation.gif" alt="logo-animated">
 
   </div>
   <!-- <div id="jumbotron" class="container d-flex flex-column justify-content-md-center mt-5 text-white">
@@ -31,7 +32,7 @@
 </template>
 
 <style lang="scss" scoped>
-  
+
   #jumbo-container{
     height: 80vh;
     img{
