@@ -1,5 +1,7 @@
 <script>
   import headerComp from './components/headerComp.vue';
+  import headerComp2 from './components/headerComp2.vue';
+
   import footerComp from './components/footerComp.vue';
 
 
@@ -7,6 +9,7 @@
     name: 'App',
     components:{
       headerComp,
+      headerComp2,
       footerComp
     }
   }
@@ -15,7 +18,9 @@
 
 <template>
 
-  <headerComp/>
+  <!-- <headerComp/> -->
+  <headerComp2/>
+
 
   <router-view></router-view>
 
