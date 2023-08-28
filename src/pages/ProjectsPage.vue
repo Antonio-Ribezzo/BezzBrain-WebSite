@@ -76,13 +76,13 @@
 </script>
 
 <template>
-  <h1 class="text-white text-center mb-4">Projects</h1>
+  <!-- <h1 class="text-white text-center mb-4">Projects</h1> -->
 
 
-  <div class="container mb-4 d-flex flex-row justify-content-start align-items-start px-5">
+  <!-- <div class="container mb-4 d-flex flex-row justify-content-start align-items-start px-5"> -->
 
     <!-- checkbox Technologies  -->
-    <div class="my-3">
+    <!-- <div class="my-3">
       <button type="button" class="fs-6 btn btn-dark form-select form-select-sm" data-bs-toggle="collapse" data-bs-target="#collapseTechnologies" role="button" aria-expanded="false" aria-controls="collapseTechnologies">
         Technologies
       </button>
@@ -93,31 +93,31 @@
           </label>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- selected type of project -->
-    <div class="my-3 ms-3">
+    <!-- <div class="my-3 ms-3">
       <select @change="getProjects()" v-model="selectedType" class="form-select form-select-sm text-white border-0 fs-6 p-2" id="projectTypeSelect">
         <option value="all">All Projects</option>
         <option v-for="(elem, index) in type" :key="index" :value="elem.id" >{{ elem.name_type }}</option>
       </select>
-    </div>
+    </div> -->
 
       
 
-  </div>
+  <!-- </div> -->
 
   <!-- project cards -->
-  <div class='container d-flex justify-content-center gap-5 align-items-start flex-wrap mb-3 px-5'>
+  <!-- <div class='container d-flex justify-content-center gap-5 align-items-start flex-wrap mb-3 px-5'>
     <ProjectCard 
       v-for="(el,index) in projects"
         :projectDetails="el"
         :projectIndex="index + 1"
     />
-  </div>
+  </div> -->
 
   <!-- pagination -->
-  <nav aria-label="Page navigation">
+  <!-- <nav aria-label="Page navigation">
     <ul class="pagination pagination-sm justify-content-center mt-5 mb-3">
       <li class="page-item">
         <a class="page-link bg-dark border-0" @click.prevent="getProjects(currentPage - 1)" href="#" aria-label="Previous">
@@ -137,7 +137,7 @@
         </a>
       </li>
     </ul>
-  </nav>
+  </nav> -->
 </template>
 
 <style lang="scss" scoped>

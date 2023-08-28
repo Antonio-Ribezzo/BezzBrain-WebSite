@@ -1,49 +1,74 @@
 <script>
     export default {
-        name: 'headerComp'
+        name: 'headerComp',
     }
 </script>
 
 <template>
     <nav class="navbar navbar-expand-md my-3 py-0">
-            <div class="container-fluid">
-
-                <router-link :to="{ name: 'home'}" class="navbar-brand">
-                    <div>
-                        <h1 class="m-0">bezzbrain</h1>
-                    </div>
-                </router-link>
-
-                <!-- humburger -->
-                <button class="navbar-toggler border-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <font-awesome-icon :icon="['fas', 'bars']" alt="Toggle navigation" class=""/>
-                </button>
-
-
-
-                <div class="collapse navbar-collapse me-auto" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto gap-2">
-                        <li class="nav-item">
-                            <router-link :to="{ name: 'home'}" class="nav-link px-1 py-1"><span>home</span></router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link :to="{ name: 'projects'}" class="nav-link px-1 py-1"><span>projects</span></router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link :to="{ name: 'about-me'}" class="nav-link px-1 py-1"><span>about me</span></router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link :to="{ name: 'contacts'}" class="nav-link px-1 py-1"><span>contacts</span></router-link>
-                        </li>
-                    </ul>
+        <div class="container-fluid">
+            <router-link :to="{ name: 'home'}" class="navbar-brand">
+                <div>
+                    <h1 class="m-0">bezzbrain</h1>
                 </div>
+            </router-link>
+            <button class="fs-5 bg-bezz navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <font-awesome-icon :icon="['fas', 'bars']" alt="Toggle navigation" class="bg-bezz text-black"/>
+            </button>
+            <!-- sidebar  -->
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <button type="button" class="bg-bezz shadow-none ms-auto text-black" data-bs-dismiss="offcanvas" aria-label="Close">
+                    <font-awesome-icon :icon="['fas', 'x']" alt="Toggle navigation" class="bg-bezz text-black"/>
+                </button>
+              </div>
+              <!-- sidebar body  -->
+              <div class="offcanvas-body d-flex flex-column">
+                <ul class="navbar-nav ms-md-auto gap-2 justify-content-center align-items-center flex-grow-1">
+                  <li class="nav-item" data-bs-dismiss="offcanvas">
+                    <router-link :to="{ name: 'home'}" class="nav-link py-1"><span>home</span></router-link>
+                  </li>
+                  <li class="nav-item" data-bs-dismiss="offcanvas">
+                    <router-link :to="{ name: 'projects'}" class="nav-link py-1"><span>projects</span></router-link>
+                  </li>
+                  <li class="nav-item" data-bs-dismiss="offcanvas">
+                    <router-link :to="{ name: 'about-me'}" class="nav-link py-1"><span>about me</span></router-link>
+                  </li>
+                  <li class="nav-item" data-bs-dismiss="offcanvas">
+                    <router-link :to="{ name: 'contacts'}" class="nav-link py-1"><span>contacts</span></router-link>
+                  </li>
+                </ul>
+              </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 </template>
 
 <style lang="scss" scoped>
+    @use '../style/main.scss' as *;
     @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
+
+    .navbar-toggler{
+        border: none;
+    }
+
+    .sidebar{
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+    }
+
+    font-awesome-icon{
+        line-height: 100%;
+    }
+
+    .offcanvas.offcanvas-start{
+        width: 100% !important;
+    }
+
     span,h1{
         font-family: 'Amatic SC', cursive;
         font-size: 2rem;
@@ -60,13 +85,13 @@
 
     @media screen and (max-width: 570px) {
         span{
-            font-size: 1.2rem;
+            font-size: 1.6rem;
         }
     }
 
     @media screen and (min-width: 571px) and (max-width: 767px) {
         span{
-            font-size: 1.3rem;
+            font-size: 1.6rem;
         }
     }
 </style>

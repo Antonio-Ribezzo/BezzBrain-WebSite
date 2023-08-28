@@ -7,7 +7,7 @@
 <template>
   
   <div id="jumbo-container" class="d-flex justify-content-center align-items-center">
-    <img src="/img/logo-animation.gif" alt="logo-animated">
+    <img src="/img/logo-animation.webp" alt="logo-animated">
 
   </div>
   <!-- <div id="jumbotron" class="container d-flex flex-column justify-content-md-center mt-5 text-white">
@@ -37,6 +37,7 @@
     height: 80vh;
     img{
       width: 200px;
+      height: 200px;
     }
   }
   
@@ -46,6 +47,7 @@
       height: 80vh;
       img{
         width: 200px;
+        height: 200px;
       }
     }
   }
@@ -55,6 +57,7 @@
       height: 80vh;
       img{
         width: 300px;
+        height: 300px;
       }
     }
   }
@@ -63,6 +66,7 @@
       height: 80vh;
       img{
         width: 400px;
+        height: 400px;
       }
     }
   }
@@ -71,6 +75,7 @@
       height: 80vh;
       img{
         width: 500px;
+        height: 500px;
       }
     }
   }

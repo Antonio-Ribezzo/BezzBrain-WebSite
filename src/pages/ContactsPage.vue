@@ -46,8 +46,8 @@
 
 <template>
    <div class="container mb-5 d-flex flex-column justify-content-start align-items-between">
-        <h1 class="text-center m-0">get in touch</h1>
-        <img src="/img/mail-animation.gif" alt="mail-animated">
+        <!-- <h1 class="text-center m-0">get in touch</h1> -->
+        <img src="/img/mail-animation.webp" alt="mail-animated">
         <form @submit.prevent="sendForm()" class="d-flex flex-column align-items-between">
             <div class="mb-3">
                 <label for="" class="form-label">Name</label>
@@ -82,6 +82,7 @@
     img{
         margin: 0 auto;
         width: 200px;
+        height: 200px;
     }
     form{
         div{
@@ -113,6 +114,7 @@
     }
     img{
         width: 150px;
+        height: 150px;
     }
  }
 }
@@ -124,6 +126,7 @@
     }
     img{
         width: 200px;
+        height: 200px;
     }
  }    
 }
@@ -135,6 +138,7 @@
     }
     img{
         width: 250px;
+        height: 250px;
     }
  }    
 }
@@ -146,6 +150,7 @@
     }
     img{
         width: 300px;
+        height: 300px;
     }
  }    
 }
