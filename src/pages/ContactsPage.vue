@@ -47,7 +47,7 @@
 <template>
    <div class="container mb-5 d-flex flex-column justify-content-start align-items-between">
         <!-- <h1 class="text-center m-0">get in touch</h1> -->
-        <img src="/img/mail-animation.webp" alt="mail-animated">
+        <img src="/img/mail-animation-copy.gif" alt="mail-animated">
         <form @submit.prevent="sendForm()" class="d-flex flex-column align-items-between">
             <div class="mb-3">
                 <label for="" class="form-label">Name</label>
