@@ -13,9 +13,10 @@
         mounted(){
             console.log(this.$route);
             this.getSingleProject();
-            // console.log(this.$project)
+            console.log(this.$project)
         },
         methods:{
+
             getSingleProject(){
                 axios.get(`${this.store.base_Url}/api/projects/${this.$route.params.id}`).then((response)=>{
                     if(response.data.success===true){
