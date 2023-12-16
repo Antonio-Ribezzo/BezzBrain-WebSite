@@ -61,6 +61,8 @@
 
             })
           },
+          
+
           getTypes(){
             axios.get(`${this.store.base_Url}/api/type`).then(res => {
               this.type = res.data.types

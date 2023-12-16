@@ -7,22 +7,24 @@
         data(){
             return{
                 store,
-                project:[]
+                project:[],
             }
         },
         mounted(){
-            console.log(this.$route);
+            // console.log(this.$route);
+            // console.log('Project ID:', this.$route.params.id);
             this.getSingleProject();
-            console.log(this.$project)
+            // console.log(this.$project)
         },
         methods:{
 
             getSingleProject(){
-                axios.get(`${this.store.base_Url}/api/projects/${this.$route.params.id}`).then((response)=>{
+                const projectId = this.$route.params.id;
+                axios.get(`${this.store.base_Url}/api/projects/${projectId}`).then((response)=>{
                     if(response.data.success===true){
                         this.project = response.data.project;
-                        console.log(response.data.project)
-                        console.log(this.project)
+                        // console.log(response.data.project)
+                        // console.log(this.project)
                     }else{
                         //redirect to 404 page
                         this.$router.push({name: 'not-found'})
@@ -34,7 +36,7 @@
 </script>
 
 <template>
-    <div class='container d-flex flex-column align-items-center justify-content-center my-5 position-relative text-white'>   
+    <div class='container d-flex flex-column align-items-center justify-content-center my-5 position-relative'>   
         <div class="card bg-dark p-3 mb-2">
             <img :src="store.base_Url + '/storage/' + project.cover_image " :alt="project.title" class="card-img-top">
         </div>
@@ -50,9 +52,9 @@
         <!-- description -->
         <p class="card rounded p-3 bg-dark text-white my-2">{{ project.description }}</p>
         <!-- link -->
-        <a :href="project.link" target="_blank" class="my-2 btn btn-outline-light">Go!</a>
+        <a :href="project.link" target="_blank" class="my-2 btn btn-outline-dark">Go!</a>
         <!-- arrow prev -->
-        <router-link :to="{ name: 'projects'}" class="mt-2 btn btn-outline-light rounded-circle position-absolute" style="top:-4rem; left:1rem;">
+        <router-link :to="{ name: 'projects'}" class="mt-2 btn btn-outline-dark rounded-circle position-absolute" style="top:-4rem; left:1rem;">
             <font-awesome-icon :icon="['fas', 'arrow-left']" />
         </router-link>
     </div>

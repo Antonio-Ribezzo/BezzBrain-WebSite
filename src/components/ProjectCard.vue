@@ -8,13 +8,18 @@
             return{
                 store
             }
+        },
+        methods: {
+            generateSlug(title) {
+                return title.toLowerCase().replace(/\s+/g, '-');
+            }
         }
     }
 </script>
 
 <template>
     <div class="card bg-dark text-white flex-wrap">
-        <router-link class="text-decoration-none" :to="{name: 'project', params:{ id: projectIndex, title:projectName}}">
+        <router-link class="text-decoration-none" :to="{ name: 'project', params: { id: projectIndex, slug: generateSlug(projectName)}}">
             <img class="card-img-top" :src="store.base_Url + '/storage/' + projectDetails.cover_image " :alt="projectDetails.title">
             <div class="card-body">
                 <h2 class="card-title text-center text-white">{{ projectDetails.title }}</h2>
