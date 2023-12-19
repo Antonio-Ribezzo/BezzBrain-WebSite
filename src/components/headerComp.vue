@@ -29,13 +29,13 @@
                     <router-link :to="{ name: 'home'}" class="nav-link py-1"><span>home</span></router-link>
                   </li>
                   <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <router-link :to="{ name: 'projects'}" class="nav-link py-1"><span>projects</span></router-link>
+                    <router-link :to="{ name: 'projects'}" class="nav-link py-1"><span>works</span></router-link>
                   </li>
                   <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <router-link :to="{ name: 'about-me'}" class="nav-link py-1"><span>about me</span></router-link>
+                    <router-link :to="{ name: 'about-me'}" class="nav-link py-1"><span>about</span></router-link>
                   </li>
                   <li class="nav-item" data-bs-dismiss="offcanvas">
-                    <router-link :to="{ name: 'contacts'}" class="nav-link py-1"><span>contacts</span></router-link>
+                    <router-link :to="{ name: 'contacts'}" class="nav-link py-1"><span>contact</span></router-link>
                   </li>
                 </ul>
               </div>
