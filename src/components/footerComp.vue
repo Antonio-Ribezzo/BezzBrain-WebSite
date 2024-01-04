@@ -5,15 +5,16 @@
 </script>
 
 <template>
-    <div id="footerContainer" class="p-1 position-fixed row justify-content-between align-items-center px-3">
-        <span class="text-start col-4">© Copyright 2021 - 2023. All Rights</span>
+    <div id="footerContainer" class="p-1 position-fixed row justify-content-center align-items-center px-3">
+        <span class="text-start col-4 d-none d-md-block">© Copyright 2021 - 2023. All Rights</span>
         <span class="text-center col-4">created by bezz</span>
-        <span class="text-end col-4">P.IVA 09876567854</span>
+        <span class="text-end col-4 d-none d-md-block">P.IVA 09876567854</span>
     </div>
 </template>
 
 <style lang="scss" scoped>
     #footerContainer{
+        z-index:-1;
         bottom: 0;
         left: 0;
         right: 0;

@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-md my-3 py-0">
+    <nav class="navbar navbar-expand-md py-3 position-sticky">
         <div class="container-fluid">
             <router-link :to="{ name: 'home'}" class="navbar-brand">
                 <div>
@@ -23,7 +23,7 @@
                 </button>
               </div>
               <!-- sidebar body  -->
-              <div class="offcanvas-body d-flex flex-column">
+              <div class="offcanvas-body d-flex flex-column ">
                 <ul class="navbar-nav ms-md-auto gap-2 justify-content-center align-items-center flex-grow-1">
                   <li class="nav-item" data-bs-dismiss="offcanvas">
                     <router-link :to="{ name: 'home'}" class="nav-link py-1"><span>home</span></router-link>
@@ -38,6 +38,10 @@
                     <router-link :to="{ name: 'contacts'}" class="nav-link py-1"><span>contact</span></router-link>
                   </li>
                 </ul>
+                <div class="d-flex justify-content-between align-items-center d-md-none">
+                    <span class="text-start fs-6 col-4">© Copyright 2021 - 2023. All Rights</span>
+                    <span class="text-end fs-6 col-4">P.IVA 09876567854</span>
+                </div>
               </div>
             </div>
         </div>
@@ -47,6 +51,11 @@
 <style lang="scss" scoped>
     @use '../style/main.scss' as *;
     @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+    nav{
+        top: 0;
+        
+    }
 
     .navbar-toggler:focus{
         box-shadow: none;
@@ -58,7 +67,7 @@
 
     .sidebar{
         background-color: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(10px);
+        // backdrop-filter: blur(10px);
     }
 
     font-awesome-icon{
