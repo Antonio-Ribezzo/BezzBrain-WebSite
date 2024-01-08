@@ -8,7 +8,6 @@
   
   <div id="jumbo-container" class="d-flex justify-content-center align-items-center">
     <img src="/img/logo-animation.webp" alt="logo-animated">
-
   </div>
   <div id="jumbotron" class="container d-flex flex-column justify-content-md-center mt-5 mb-5 text-black">
     <span id="textMyName" class="d-block mt-2 text-center font-size-h0">I'm Antonio</span>
@@ -23,7 +22,7 @@
       <div class="d-flex flex-column mb-5">
         <h2 class="font-size-h2">Creative & Technical <br> Web Developer</h2>
         <div class="d-flex flex-column">
-          <h3 class="text-uppercase mb-0 font-size-h3">last update &star; <span>Jul/23</span></h3>
+          <h3 class="text-uppercase mb-0 font-size-h3">last update &star; <span>Jan/24</span></h3>
         </div>
       </div>
     </div>
@@ -36,7 +35,7 @@
 
   #jumbo-container{
     font-family: 'Amatic SC', cursive;
-    height: 80vh;
+    height: 85vh;
     img{
       width: 200px;
       height: 200px;
@@ -79,7 +78,7 @@
   }
   @media screen and (min-width: 1024px) {
      #jumbo-container{
-      height: 80vh;
+      height: 85vh;
       img{
         width: 500px;
         height: 500px;
