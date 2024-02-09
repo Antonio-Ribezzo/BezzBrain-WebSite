@@ -24,7 +24,6 @@
             name="contact"
             method="POST"
             data-netlify="true"
-            @submit.prevent="handleSubmit"
         >   
             <input type="hidden" name="form-name" value="contact">
             <div class="mb-3">
