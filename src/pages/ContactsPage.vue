@@ -15,10 +15,15 @@
         },
         methods: {
             handleSubmit() {
-                console.log('Form submit handler called');
+                // Blocca l'invio del form
+                event.preventDefault();
+
+                // Visualizza i dati del form nella console
                 console.log('Name:', this.name);
                 console.log('Email:', this.email);
                 console.log('Message:', this.message);
+
+                // Ora puoi effettuare ulteriori operazioni come inviare i dati del form via AJAX
             }
         }
     }
@@ -32,7 +37,7 @@
             name="contact"
             method="POST"
             data-netlify="true"
-            onsubmit="handleSubmit()"
+            @submit.prevent="handleSubmit"
         >   
             <input type="hidden" name="form-name" value="contact">
             <div class="mb-3">
