@@ -12,6 +12,14 @@
                 success: false,
                 errors: {}
             }
+        },
+        methods: {
+            handleSubmit() {
+                console.log('Form submit handler called');
+                console.log('Name:', this.name);
+                console.log('Email:', this.email);
+                console.log('Message:', this.message);
+            }
         }
     }
 </script>
@@ -24,6 +32,7 @@
             name="contact"
             method="POST"
             data-netlify="true"
+            onsubmit="handleSubmit()"
         >   
             <input type="hidden" name="form-name" value="contact">
             <div class="mb-3">
