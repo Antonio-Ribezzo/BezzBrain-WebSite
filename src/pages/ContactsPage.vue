@@ -22,7 +22,6 @@
         <img src="/img/mail-animation-copy.gif" alt="mail-animated">
         <form  class="d-flex flex-column align-items-between"
             name="contact"
-            action="/"
             method="POST"
             data-netlify="true"
             @submit.prevent="handleSubmit"
