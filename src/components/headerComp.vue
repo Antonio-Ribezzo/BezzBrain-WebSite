@@ -38,9 +38,9 @@
                     <router-link :to="{ name: 'contacts'}" class="nav-link py-1"><span>contact</span></router-link>
                   </li>
                 </ul>
-                <div class="d-flex justify-content-between align-items-center d-md-none">
-                    <span class="text-start fs-6 col-4">© Copyright 2021 - 2023. All Rights</span>
-                    <span class="text-end fs-6 col-4">P.IVA 09876567854</span>
+                <div class="d-flex justify-content-between align-items-start mb-5 d-md-none">
+                    <span class="text-start fs-6 col-4">© Copyright 2021 - 2024. All Rights</span>
+                    <!-- <span class="text-end fs-6 col-4">P.IVA 09876567854</span> -->
                 </div>
               </div>
             </div>

@@ -1,5 +1,4 @@
 <script>
-    import axios from 'axios';
     import { store } from '../store';
 
     export default {
@@ -13,33 +12,6 @@
                 success: false,
                 errors: {}
             }
-        },
-        methods: {
-            sendForm(){
-                //chiamata axios con validazione
-                const data = {
-                    name: this.name,
-                    email: this.email,
-                    message: this.message
-                }
-
-                axios.post(`${this.store.base_Url}/api/contacts`, data).then(res => {
-                    //riscrivo false oppure true alla variabile success
-                    this.success = res.data.success
-
-                    console.log(this.success)
-
-                    if(this.success){
-                        //se è true
-                        this.name = '';
-                        this.email = '';
-                        this.message = '';
-                    } else {
-                        //se ci sono degli errori dal LeadController ho generato la chiave errors a cui ho associato il validator
-                        this.errors = res.data.errors;
-                    }
-                })
-            }
         }
     }
 </script>
@@ -48,18 +20,23 @@
    <div class="container mb-5 d-flex flex-column justify-content-start align-items-between">
         <!-- <h1 class="text-center m-0">get in touch</h1> -->
         <img src="/img/mail-animation-copy.gif" alt="mail-animated">
-        <form @submit.prevent="sendForm()" class="d-flex flex-column align-items-between">
+        <form  class="d-flex flex-column align-items-between"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            onSubmit="submit"
+        >
             <div class="mb-3">
                 <label for="" class="form-label">Name</label>
-                <input v-model="name" type="text" class="form-control" name="name" id="" placeholder="...name..." required>
+                <input v-model="name" name="name" type="text" class="form-control" id="" placeholder="...name..." required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Email</label>
-                <input v-model="email" type="email" class="form-control" name="email" id="" placeholder="...email..." required>
+                <input v-model="email" name="email" type="email" class="form-control" id="" placeholder="...email..." required>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Message</label>
-                <textarea v-model="message" class="form-control" name="message" id="" rows="5" placeholder="...message..." required></textarea>
+                <textarea v-model="message" name="message" class="form-control" id="" rows="5" placeholder="...message..." required></textarea>
             </div>
             <button class="btn btn-outline-dark mt-1 mb-4 align-self-center" type="submit">Send</button>
         </form>

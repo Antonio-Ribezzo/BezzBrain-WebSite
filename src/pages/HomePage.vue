@@ -10,8 +10,9 @@
     <img src="/img/logo-animation.webp" alt="logo-animated">
   </div>
   <div id="jumbotron" class="container d-flex flex-column justify-content-md-center mt-5 mb-5 text-black">
-    <span id="textMyName" class="d-block mt-2 text-center font-size-h0">I'm Antonio</span>
-    <h1 class="mt-2 mb-5 text-center font-size-h1">Portfolio/23</h1>
+    <span id="textMyName" class="d-block mt-2 text-center fs-1">I'm Antonio</span>
+    <span class="text-center fs-2">&</span>
+    <h1 class="mb-5 text-center fs-1">this is my brain</h1>
     <div class="d-flex flex-column justify-content-center align-items-center text-center flex-md-row justify-content-md-between text-md-start mb-md-4 mt-5">
       <div class="d-flex flex-column mb-5">
         <h2 class="font-size-h2">Full Stack <br> Developer</h2>
@@ -22,7 +23,7 @@
       <div class="d-flex flex-column mb-5">
         <h2 class="font-size-h2">Creative & Technical <br> Web Developer</h2>
         <div class="d-flex flex-column">
-          <h3 class="text-uppercase mb-0 font-size-h3">last update &star; <span>Jan/24</span></h3>
+          <h3 class="text-uppercase mb-0 font-size-h3">last update &star; <span>Feb/24</span></h3>
         </div>
       </div>
     </div>
