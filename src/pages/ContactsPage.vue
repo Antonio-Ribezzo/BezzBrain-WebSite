@@ -39,7 +39,7 @@
             data-netlify="true"
             @submit.prevent="handleSubmit"
         >   
-            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="contact" value="contact">
             <div class="mb-3">
                 <label for="user-name" class="form-label">Name</label>
                 <input v-model="name" name="name" type="text" class="form-control" id="user-name" placeholder="...name..." required>
