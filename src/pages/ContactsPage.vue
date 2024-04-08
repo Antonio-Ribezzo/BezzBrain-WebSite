@@ -33,13 +33,16 @@
    <div class="container mb-5 d-flex flex-column justify-content-start align-items-between">
         <!-- <h1 class="text-center m-0">get in touch</h1> -->
         <img src="/img/mail-animation-copy.gif" alt="mail-animated">
-        <form  class="d-flex flex-column align-items-between"
+        <form class="d-flex flex-column align-items-between"
             name="contact"
             method="POST"
+            action=""
             data-netlify="true"
+            data-netlify-honeypot="bot-field"
             @submit.prevent="handleSubmit"
         >   
-            <input type="hidden" name="contact" value="contact">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="bot-field">
             <div class="mb-3">
                 <label for="user-name" class="form-label">Name</label>
                 <input v-model="name" name="name" type="text" class="form-control" id="user-name" placeholder="...name..." required>
