@@ -36,7 +36,7 @@
         <form class="d-flex flex-column align-items-between"
             name="contact"
             method="POST"
-            action=""
+            action="/"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
             
