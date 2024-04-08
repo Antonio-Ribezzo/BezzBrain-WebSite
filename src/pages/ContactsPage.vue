@@ -41,15 +41,15 @@
         >   
             <input type="hidden" name="form-name" value="contact">
             <div class="mb-3">
-                <label for="" class="form-label">Name</label>
+                <label for="user-name" class="form-label">Name</label>
                 <input v-model="name" name="name" type="text" class="form-control" id="user-name" placeholder="...name..." required>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Email</label>
+                <label for="user-email" class="form-label">Email</label>
                 <input v-model="email" name="email" type="email" class="form-control" id="user-email" placeholder="...email..." required>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Message</label>
+                <label for="user-message" class="form-label">Message</label>
                 <textarea v-model="message" name="message" class="form-control" id="user-message" rows="5" placeholder="...message..." required></textarea>
             </div>
             <button class="btn btn-outline-dark mt-1 mb-4 align-self-center" type="submit">Send</button>
