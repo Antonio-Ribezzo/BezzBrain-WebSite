@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run copy-robots && vite build",
-    "copy-robots": "cp src/robots.txt dist/",
+    "copy-robots": "mkdir -p dist && cp src/robots.txt dist/",
     "preview": "vite preview"
   },
   "dependencies": {
