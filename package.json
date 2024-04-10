@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run copy-robots && vite build",
+    "build": "vite build && npm run copy-robots",
     "copy-robots": "mkdir -p dist && cp src/robots.txt dist/",
     "preview": "vite preview"
   },
