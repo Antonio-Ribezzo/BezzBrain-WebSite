@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import posthogPlugin from "./plugins/posthog"; //import the plugin.
 
 // importo il router
 import { router } from './router';
@@ -26,4 +27,5 @@ library.add(faBurger, faArrowLeft, faBars, faX)
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
 .use(router)
+.use(posthogPlugin)
 .mount('#app')
