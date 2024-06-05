@@ -28,7 +28,7 @@
                   <li class="nav-item" data-bs-dismiss="offcanvas">
                     <router-link :to="{ name: 'home'}" class="nav-link py-1"><span>home</span></router-link>
                   </li>
-                  <li class="nav-item" data-bs-dismiss="offcanvas">
+                  <!-- <li class="nav-item" data-bs-dismiss="offcanvas">
                     <router-link :to="{ name: 'projects'}" class="nav-link py-1"><span>works</span></router-link>
                   </li>
                   <li class="nav-item" data-bs-dismiss="offcanvas">
@@ -36,7 +36,7 @@
                   </li>
                   <li class="nav-item" data-bs-dismiss="offcanvas">
                     <router-link :to="{ name: 'contacts'}" class="nav-link py-1"><span>contact</span></router-link>
-                  </li>
+                  </li> -->
                 </ul>
                 <div class="d-flex justify-content-between align-items-start mb-5 d-md-none">
                     <span class="text-start fs-6 col-4">© Copyright 2021 - 2024. All Rights</span>

@@ -6,10 +6,11 @@
 
 <template>
   
-  <div id="jumbo-container" class="d-flex justify-content-center align-items-center">
+  <div id="jumbo-container" class="d-flex flex-column justify-content-center align-items-center">
+    <h1 class="mb-5 text-center fs-1">Under construction</h1>
     <img src="/img/logo-animation.webp" alt="logo-animated">
   </div>
-  <div id="jumbotron" class="container d-flex flex-column justify-content-md-center mt-5 mb-5 text-black">
+  <!-- <div id="jumbotron" class="container d-flex flex-column justify-content-md-center mt-5 mb-5 text-black">
     <span id="textMyName" class="d-block mt-2 text-center fs-1">I'm Antonio</span>
     <span class="text-center fs-2">&</span>
     <h1 class="mb-5 text-center fs-1">this is my brain</h1>
@@ -27,7 +28,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <style lang="scss" scoped>
