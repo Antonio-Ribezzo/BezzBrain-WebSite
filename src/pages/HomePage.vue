@@ -7,7 +7,8 @@
 <template>
   
   <div id="jumbo-container" class="d-flex flex-column justify-content-center align-items-center">
-    <h1 class="mb-5 text-center fs-1">Under construction</h1>
+    <h1 class="mb-2 text-center fs-1">Under construction</h1>
+    <a href="mailto:info.bezzbrain@gmail.com" title="mail" class="text-decoration-none text-black mb-5 text-center fs-1 onHover">info.bezzbrain@gmail.com</a>
     <img src="/img/logo-animation.webp" alt="logo-animated">
   </div>
   <!-- <div id="jumbotron" class="container d-flex flex-column justify-content-md-center mt-5 mb-5 text-black">
@@ -34,6 +35,11 @@
 <style lang="scss" scoped>
   @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 
+  .onHover{
+    &:hover{
+      scale:105%;
+    }
+  }
 
   #jumbo-container{
     font-family: 'Amatic SC', cursive;
