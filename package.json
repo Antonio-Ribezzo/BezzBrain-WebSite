@@ -17,6 +17,7 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0-alpha3",
     "posthog-js": "^1.128.3",
+    "template-vite-vue3": "file:",
     "vue": "^3.2.47",
     "vue-router": "^4.2.2"
   },
