@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build && npm run copy-robots",
     "copy-robots": "mkdir -p dist && cp src/robots.txt dist/",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fontsource/audiowide": "^5.0.3",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
+    "gh-pages": "^6.3.0",
     "sass": "^1.62.1",
     "vite": "^4.3.2",
     "vite-plugin-copy": "^0.1.6"
