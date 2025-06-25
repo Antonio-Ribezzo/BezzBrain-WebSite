@@ -10,36 +10,36 @@ import NotFoundPage from './pages/NotFoundPage.vue';
 
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/BezzBrain-WebSite/'),
     routes: [
         {
-            path: '/BezzBrain-WebSite/',
+            path: '/',
             name: 'home',
             component: HomePage
         },
         {
-            path: 'BezzBrain-WebSite/projects',
+            path: '/projects',
             name: 'projects',
             component: ProjectsPage
         },
         {
-            path: 'BezzBrain-WebSite/projects/project:id/:slug',
+            path: '/projects/project:id/:slug',
             name: 'project',
             component: SingleProjectPage,
             props: true,
         },
         {
-            path: 'BezzBrain-WebSite/about-me',
+            path: '/about-me',
             name: 'about-me',
             component: AboutPage
         },
         {
-            path: 'BezzBrain-WebSite/contacts',
+            path: '/contacts',
             name: 'contacts',
             component: ContactsPage
         },
         {
-            path: 'BezzBrain-WebSite/:pathMatch(.*)*',
+            path: '/:pathMatch(.*)*',
             name: 'not-found',
             component: NotFoundPage
         }
