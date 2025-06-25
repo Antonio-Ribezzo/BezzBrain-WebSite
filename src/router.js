@@ -13,33 +13,33 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/',
+            path: '/BezzBrain-WebSite/',
             name: 'home',
             component: HomePage
         },
         {
-            path: '/projects',
+            path: 'BezzBrain-WebSite/projects',
             name: 'projects',
             component: ProjectsPage
         },
         {
-            path: '/projects/project:id/:slug',
+            path: 'BezzBrain-WebSite/projects/project:id/:slug',
             name: 'project',
             component: SingleProjectPage,
             props: true,
         },
         {
-            path: '/about-me',
+            path: 'BezzBrain-WebSite/about-me',
             name: 'about-me',
             component: AboutPage
         },
         {
-            path: '/contacts',
+            path: 'BezzBrain-WebSite/contacts',
             name: 'contacts',
             component: ContactsPage
         },
         {
-            path: '/:pathMatch(.*)*',
+            path: 'BezzBrain-WebSite/:pathMatch(.*)*',
             name: 'not-found',
             component: NotFoundPage
         }
